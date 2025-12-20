@@ -1,0 +1,14 @@
+pymupdf
+langchain-text-splitters
+google-genai
+qdrant-client
+python-dotenv
+fastapi
+uvicorn[standard]
+python-multipart
+sqlalchemy
+psycopg2-binary
+bcrypt
+python-jose[cryptography]
+email-validator
+sentry-sdk

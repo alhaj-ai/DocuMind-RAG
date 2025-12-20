@@ -1,0 +1,31 @@
+# Environment variables
+.env
+*.env.local
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python cache & databases
+__pycache__/
+*.py[cod]
+*$py.class
+*.db
+*.sqlite3
+qdrant_data/
+*.egg-info/
+dist/
+build/
+
+# Testing & evaluation
+.pytest_cache/
+.deepeval/
+.coverage
+htmlcov/
+
+# Editor & IDE
+.vscode/
+.idea/
+.qodo/
+*.log
