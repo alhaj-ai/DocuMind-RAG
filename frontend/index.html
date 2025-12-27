@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DocuMind RAG — Sign In</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body class="auth-body">
+  <div class="auth-card">
+    <div class="brand">
+      <div class="brand-logo">🧠</div>
+      <h1>DocuMind RAG</h1>
+      <p class="brand-sub">Enterprise Multi-Tenant Document Intelligence & Citations</p>
+    </div>
+
+    <div class="tabs" id="tabs">
+      <span class="tab-indicator"></span>
+      <button class="tab active" data-tab="login" type="button">Login</button>
+      <button class="tab" data-tab="register" type="button">Register</button>
+    </div>
+
+    <div class="forms">
+      <form id="loginForm" class="form active">
+        <label>
+          Email
+          <input type="email" id="loginEmail" required placeholder="you@example.com" />
+        </label>
+        <label>
+          Password
+          <input type="password" id="loginPassword" required placeholder="••••••••" />
+        </label>
+        <button type="submit" class="btn-primary">Sign in</button>
+      </form>
+
+      <form id="registerForm" class="form">
+        <label>
+          Email
+          <input type="email" id="registerEmail" required placeholder="you@example.com" />
+        </label>
+        <label>
+          Password
+          <input type="password" id="registerPassword" required placeholder="At least 8 characters" />
+        </label>
+        <button type="submit" class="btn-primary">Create account</button>
+      </form>
+    </div>
+
+    <p id="authMessage" class="message"></p>
+
+    <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-color, #2d3748); text-align: center; font-size: 0.8rem; color: #a0aec0;">
+      Developed by <strong>Mohammed AL-Haj</strong> | <a href="https://github.com/alhaj-ai/DocuMind-RAG" target="_blank" style="color: #63b3ed; text-decoration: none;">@alhaj-ai</a>
+    </div>
+  </div>
+
+  <script src="/static/js/common.js"></script>
+  <script src="/static/js/login.js"></script>
+</body>
+</html>

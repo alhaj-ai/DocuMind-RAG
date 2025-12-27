@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DocuMind RAG — Document Intelligence</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body class="app-body">
+  <header class="topbar">
+    <div class="topbar-brand">
+      <span style="font-size: 1.4rem; margin-right: 8px;">🧠</span>
+      <strong>DocuMind RAG</strong>
+      <span style="font-size: 0.75rem; background: rgba(66, 153, 225, 0.2); color: #63b3ed; padding: 2px 8px; border-radius: 10px; margin-left: 8px; border: 1px solid rgba(66, 153, 225, 0.3);">Qdrant + Gemini</span>
+    </div>
+    <div class="topbar-right">
+      <a href="/docs" target="_blank" style="color: #cbd5e0; text-decoration: none; font-size: 0.85rem; margin-right: 14px;">API Docs</a>
+      <a href="https://github.com/alhaj-ai/DocuMind-RAG" target="_blank" style="color: #cbd5e0; text-decoration: none; font-size: 0.85rem; margin-right: 16px;">GitHub</a>
+      <span id="userEmail" class="user-email"></span>
+      <button id="logoutBtn" class="btn-ghost" type="button">Logout</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Your Documents</h2>
+      <p class="hint">Upload one or more PDFs (Arabic or English) to index into your private vector collection.</p>
+      <input type="file" id="fileInput" accept="application/pdf" multiple />
+      <button id="processBtn" class="btn-primary" type="button">Process PDFs</button>
+      <p id="uploadStatus" class="status"></p>
+
+      <div class="danger-zone">
+        <h3>Privacy & GDPR</h3>
+        <p class="hint">Isolated per-user collections. Full data sovereignty.</p>
+        <button id="deleteDocsBtn" class="btn-danger" type="button">Delete my documents</button>
+        <button id="deleteAccountBtn" class="btn-danger" type="button">Delete my account</button>
+      </div>
+
+      <div style="margin-top: auto; padding-top: 20px; font-size: 0.75rem; color: #718096; text-align: center; border-top: 1px solid var(--border-color, #2d3748);">
+        Engineered by <strong>Mohammed AL-Haj</strong><br/>
+        <a href="https://github.com/alhaj-ai" target="_blank" style="color: #63b3ed; text-decoration: none;">@alhaj-ai</a> · Sana'a, Yemen
+      </div>
+    </aside>
+
+    <main class="chat">
+      <div id="messages" class="messages">
+        <div class="empty-state">
+          <p>Upload your PDF documents and ask questions in Arabic or English to explore grounded citations.</p>
+        </div>
+      </div>
+      <form id="chatForm" class="chat-input">
+        <input type="text" id="questionInput" placeholder="Ask a question about your documents (e.g. ما هي أهم النقاط / Key findings)..." autocomplete="off" />
+        <button type="submit" class="btn-primary">Send</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="/static/js/common.js"></script>
+  <script src="/static/js/chat.js"></script>
+</body>
+</html>
